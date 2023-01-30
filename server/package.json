@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "type": "module",
+  "engine": {
+    "node": "16.x"
+  },
   "scripts": {
-    "server": "nodemon server"
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
