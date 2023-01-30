@@ -76,15 +76,18 @@ const handleSubmit = async (e) => {
   loader(messageDiv);
 
   // fetch data from server => bot's responses
-  const response = await fetch('https://openai-clone-mocha.vercel.app/', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      prompt: data.get('prompt'),
-    }),
-  });
+  const response = await fetch(
+    'https://openai-clone-anggriawanmr.vercel.app/',
+    {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        prompt: data.get('prompt'),
+      }),
+    }
+  );
 
   clearInterval(loadInterval);
   messageDiv.innerHTML = '';
